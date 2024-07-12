@@ -43,7 +43,7 @@ export default {
 		const payload = await request.text();
 		const proxyRequest = new Request(
 			`https://${
-				pathname === '/' ? 'https://staked.helius-rpc.com' : 'api.helius.xyz'
+				pathname === '/' ? 'staked.helius-rpc.com' : 'api.helius.xyz'
 			}${pathname}?api-key=${env.HELIUS_API_KEY}${search ? `&${search.slice(1)}` : ''}`,
 			{
 				method: request.method,
